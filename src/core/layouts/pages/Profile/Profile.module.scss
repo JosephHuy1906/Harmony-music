@@ -1,0 +1,256 @@
+.profile {
+    width: 98%;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--theme-mode-background-user);
+    transition: background-color linear 0.2s;
+    padding-top: 1.5em;
+    padding-bottom: 20%;
+    a {
+        color: var(--theme-mode-color);
+    }
+
+    .profile-user {
+        padding: 3%;
+        box-shadow: rgba(22, 57, 40, 0.3) 0px 19px 38px, rgba(0, 191, 99, 0.22) 0px 15px 12px;
+        background: var(--theme-mode-profile);
+        .information {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .image-profile {
+                position: relative;
+                cursor: pointer;
+                .image2 {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    box-shadow: var(--theme-mode-shadow-profile);
+                }
+                .update-profile {
+                    position: absolute;
+                    cursor: pointer;
+                    left: 0%;
+                    top: 0%;
+                    opacity: 0%;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    .icon-edit {
+                        cursor: pointer;
+                        color: black;
+                        display: flex;
+                        opacity: 0%;
+                        left: 0%;
+                        top: 0%;
+                        width: 80px;
+                        height: 40px;
+                        transition: 0.3s;
+                        z-index: 3;
+                    }
+                }
+            }
+            .image-profile:hover {
+                .image2 {
+                    filter: blur(2px);
+                }
+                .update-profile {
+                    opacity: 100%;
+                    background-color: rgba($color: var(--theme-mode-background-album), $alpha: 0.5);
+                    .icon-edit {
+                        opacity: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+            .name {
+                width: 100%;
+                padding: 4%;
+                position: relative;
+
+                .name-profile {
+                    font-size: 4.5em;
+                }
+                p {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+  
+    .btn {
+        position: absolute;
+        right: 10%;
+        button {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            margin-top: 10px;
+            cursor: pointer;
+            right: 10%;
+            color: var(--theme-mode-color);
+            background-color: var(--theme-filter);
+            box-shadow: 0 0 5px lightgray;
+            margin-right: 20px;
+        }
+        button:hover {
+            background-color: #00bf63;
+            transition: 0.5 ease-in-out;
+        }
+        a {
+            color: gray;
+        }
+        a:hover {
+            color: var(--theme-mode-color);
+            text-decoration: underline;
+        }
+    }
+   
+    
+    .list-songs {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+
+        .single-song {
+            width: 90%;
+            display: grid;
+            margin: auto;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            height: 56px;
+            border-radius: 5px;
+            transition: 0.15s;
+            cursor: pointer;
+
+            .single-left {
+                width: 100%;
+                display: flex;
+                #id {
+                    width: 2%;
+                    padding-left: 1%;
+                    display: flex;
+                    align-items: center;
+                }
+                #song {
+                    width: 80%;
+                    margin-left: 1em;
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        object-fit: cover;
+                        border-radius: 5px;
+                    }
+
+                    #song-title {
+                        height: 40px;
+                        line-height: 20px;
+                        justify-content: center;
+                        margin-left: 0.5em;
+
+                        #title {
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                        #author {
+                            font-size: 14px;
+                            font-weight: 400;
+
+                            a {
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+            }
+            .single-right {
+                width: 100%;
+                display: flex;
+                #album {
+                    width: 50%;
+                    text-align: center;
+                    line-height: 50px;
+                    color: gray;
+                    a {
+                        padding-right: 20px;
+                        color: gray;
+                    }
+                }
+                #album a:hover {
+                    color: var(--theme-mode-color);
+                }
+                #icon {
+                    opacity: 0%;
+                    padding: 0px 50px;
+                }
+                #lenght {
+                    width: 10%;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+
+                    #lenght {
+                        padding: 0px 10px;
+                        color: gray;
+                    }
+                    #icon1 {
+                        padding: 5px;
+                    }
+                }
+                .edit {
+                    width: 10%;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    margin-left: 5%;
+                    opacity: 0%;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .single-song:hover {
+            background-color: rgba(184, 180, 180, 0.329);
+
+            .single-left {
+                #song {
+                    #song-title {
+                        #author {
+                            color: var(--theme-mode-color);
+                        }
+                    }
+                }
+            }
+
+            .single-right {
+                #album {
+                    color: var(--theme-mode-color);
+                }
+                #icon {
+                    opacity: 100%;
+                }
+                #lenght {
+                    #lenght {
+                        color: var(--theme-mode-color);
+                    }
+                }
+                .edit {
+                    opacity: 100%;
+                }
+            }
+        }
+    }
+  
+}

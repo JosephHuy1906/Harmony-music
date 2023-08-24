@@ -1,0 +1,96 @@
+$primary-color: #ddd;
+$secondary-color: #999;
+$green-color: #2d5;
+$padding: 0.5em;
+.icon {
+    color: $secondary-color;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+.player-control {
+    // position: fixed;
+    // z-index: 9999;
+    // width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: $padding;
+    align-items: center;
+    position: relative;
+    color: $primary-color;
+
+    .song-bar {
+        position: absolute;
+        left: $padding;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        width: 20%;
+        cursor: pointer;
+
+        .song-infors {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            .image-container {
+                $size: 3.5em;
+                flex-shrink: 0;
+                width: $size;
+                height: $size;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .song-description {
+                p {
+                    margin: 0.2em;
+                }
+                .title,
+                .artist {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+                .artist {
+                    color: $secondary-color;
+                }
+                .title:hover,
+                .artist:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        // song-infor
+        .icons {
+            display: flex;
+            gap: 1em;
+            align-items: center;
+        }
+    }
+    // song-bar
+    .progress-controller {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1em;
+        color: $secondary-color;
+    }
+    .other-features {
+        position: absolute;
+        right: $padding;
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        cursor: pointer;
+    }
+}

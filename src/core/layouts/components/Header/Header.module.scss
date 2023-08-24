@@ -1,0 +1,41 @@
+.header {
+    width: 62.8%;
+    left: 18.6%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    top: 0.65em;
+    z-index: 9999;
+    padding: 0 2em;
+    height: var(--header-height);
+    background: var(--theme-mode-background-user);
+    transition: background-color linear 0.2s;
+
+    & .header-left {
+        display: flex;
+        align-items: center;
+
+        & .header-roadMap {
+            color: var(--theme-mode-color);
+            font-size: 1.6rem;
+            width: 75px;
+
+            & .button-roadMap {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: rgba($color: var(--theme-mode-color-rgb), $alpha: 0.2);
+                color: var(--theme-mode-color);
+
+                &:nth-child(2) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
