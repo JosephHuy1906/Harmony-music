@@ -21,7 +21,7 @@ const nextConfig = {
         ],
     },
     sassOptions: {
-        includePaths: [path.join(__dirname, 'global')],
+        includePaths: [path.join(__dirname, 'styles')],
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         // Cấu hình CORS tại đây
