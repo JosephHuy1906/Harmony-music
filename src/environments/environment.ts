@@ -5,15 +5,15 @@ interface IEnvironment {
     version: string;
 }
 const environmentDevelopment: IEnvironment = {
-    origin: 'http://localhost:3000',
-    apiUrl: 'http://localhost:5000',
+    origin: 'https://harmony-music-ten.vercel.app/',
+    apiUrl: 'https://hamony-music-web.onrender.com/',
     prefix: 'api',
     version: 'v1',
 };
 
 const environmentProduction: IEnvironment = {
-    origin: 'http://localhost:3000',
-    apiUrl: 'http://localhost:5000',
+    origin: 'https://harmony-music-ten.vercel.app/',
+    apiUrl: 'https://hamony-music-web.onrender.com/',
     prefix: 'api',
     version: 'v1',
 };

@@ -6,7 +6,7 @@ const isEnvProduction = process.env.NODE_ENV === 'production';
 
 const environment = {
     origin: isEnvProduction ? 'https://harmony-music-ten.vercel.app/' : 'https://harmony-music-ten.vercel.app/',
-    apiUrl: isEnvProduction ? 'http://localhost:5000' : 'http://localhost:5000',
+    apiUrl: isEnvProduction ? 'https://hamony-music-web.onrender.com/' : 'https://hamony-music-web.onrender.com/',
     prefix: 'api',
     version: 'v1',
 };
